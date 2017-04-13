@@ -1,0 +1,5 @@
+import { hello } from 'world'
+
+function sayHelloWorld () {
+  console.log(hello());
+}
