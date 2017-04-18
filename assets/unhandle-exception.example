@@ -1,0 +1,6 @@
+function myDumbFunction () {
+  var a = { };
+  var b = { a: a };
+  a.b = b;
+  return JSON.stringify(a);
+}

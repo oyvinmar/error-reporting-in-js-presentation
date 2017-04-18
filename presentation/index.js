@@ -4,6 +4,7 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   BlockQuote,
+  CodePane,
   Cite,
   Deck,
   Heading,
@@ -59,12 +60,35 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={[]} transitionDuration={500} theme={theme}>
         <Slide transition={["slide"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+          <Heading size={1} fit lineHeight={1} textColor="secondary">
+            Error reporting in JavaScript
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
-          </Text>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="primary">
+          <span style={{ fontSize: "128px" }}>
+            {"\u{1F914}"}
+          </span>
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading size={3} fit textColor="primary" lineHeight={1}>
+            Exceptions in JavaScript
+          </Heading>
+          <List textColor="tertiary" ordered>
+            <ListItem>Handled exceptions</ListItem>
+            <ListItem>Unhandled exceptions</ListItem>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={4} textColor="secondary" lineHeight="2">
+            Handled exception
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/handle-exception.example")} margin="20px auto" />
+        </Slide>
+        <Slide>
+          <Heading size={4} textColor="secondary" lineHeight="2">
+            Unhandled exception
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/unhandle-exception.example")} margin="20px auto" />
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>
