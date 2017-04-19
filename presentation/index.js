@@ -82,19 +82,19 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={["slide"]} >
-          <Heading size={4} textColor="secondary" lineHeight="2">
+          <Heading size={3} textColor="secondary" lineHeight="2">
             Handled exception
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/handled-exception.example")} margin="20px auto" />
         </Slide>
         <Slide transition={["slide"]} >
-          <Heading size={4} textColor="secondary" lineHeight="2">
+          <Heading size={3} textColor="secondary" lineHeight="2">
             Unhandled exception
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/unhandled-exception.example")} margin="20px auto" />
         </Slide>
         <Slide transition={["slide"]} >
-          <Heading size={4} fit textColor="secondary" lineHeight="2">
+          <Heading size={3} fit textColor="secondary" lineHeight="2">
             Reporting handled exception
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/reporting-handled-exception.example")} margin="20px auto" />
@@ -112,41 +112,66 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
         <Slide transition={["slide"]} >
-          <Heading size={4} textColor="secondary" lineHeight="2">
+          <Heading size={3} textColor="secondary" lineHeight="2">
             Try/Catch
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/reporting-unhandled-exception-try-catch.example")} margin="20px auto" />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={3} fit textColor="primary" lineHeight={2}>
-            GlobalEventHandlers.onerror
+            GlobalEventHandlers window.onerror
           </Heading>
           <Text textColor="tertiary" style={{ margin: "0 0 3em 0" }} >An event handler for the error event.</Text>
           <Link textColor="tertiary" href="https://developer.mozilla.org/en/docs/Web/API/GlobalEventHandlers/onerror"><S type="underline">See: Mozilla Developer Network</S></Link>
         </Slide>
         <Slide transition={["slide"]} >
-          <Heading size={4} textColor="secondary" lineHeight="2">
-            Try/Catch
+          <Heading size={3} textColor="secondary" lineHeight="2">
+            window.onerror syntax
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/reporting-unhandled-exception-onerror.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+        <Slide transition={["slide"]} bgColor="secondary" >
+          <Heading size={4} fit textColor="primary" lineHeight="2">
+            window.onerror arguments
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem><b>message</b> – The message associated with the error</ListItem>
+            <ListItem><b>url</b> – The URL of the script associated with the error</ListItem>
+            <ListItem><b>lineNo</b> – The line number (if available)</ListItem>
+            <ListItem><b>columnNo</b> – The column number (if available)</ListItem>
+            <ListItem><b>error</b> – The Error object associated with this error (if available)</ListItem>
           </List>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="secondary" >
+          <Heading size={3} textColor="primary" lineHeight="2">
+            The Error Object
+          </Heading>
+          <List textColor="tertiary" style={{ margin: "0 0 3em 0" }} >
+            <ListItem><b>message</b> – Same as onerror message</ListItem>
+            <ListItem><b>fileName</b> – Same as onerror url</ListItem>
+            <ListItem><b>lineNumber</b> – Same as onerror</ListItem>
+          </List>
+          <Link textColor="tertiary" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/" >
+            <S type="underline">Source: Mozilla Developer Network</S>
+          </Link>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="secondary" >
+          <Text textColor="tertiary" style={{ margin: "0 0 3em 0" }}>May also contain a non-standard property: <b>Error.prototype.stack</b></Text>
+          <Link textColor="tertiary" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">
+            <S type="underline"> Source: Mozilla Developer Network</S>
+          </Link>
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={3} textColor="secondary" lineHeight="2">
+            Chrome 57
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/chrome-stack.example")} margin="20px auto" />
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={3} textColor="secondary" lineHeight="2">
+            Firefox 52
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/firefox-stack.example")} margin="20px auto" />
         </Slide>
         <CodeSlide
           lang="js"
@@ -160,7 +185,6 @@ export default class Presentation extends React.Component {
             { loc: [3, 4], note: "Call and log hello" }
           ]}
         />
-
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
