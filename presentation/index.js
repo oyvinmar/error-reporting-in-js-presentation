@@ -3,14 +3,17 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Appear,
   BlockQuote,
-  CodePane,
   Cite,
+  Link,
+  CodePane,
   Deck,
   Heading,
   ListItem,
   List,
   Quote,
+  S,
   Slide,
   Text
 } from "spectacle";
@@ -69,7 +72,7 @@ export default class Presentation extends React.Component {
             {"\u{1F914}"}
           </span>
         </Slide>
-        <Slide bgColor="secondary">
+        <Slide transition={["slide"]} bgColor="secondary">
           <Heading size={3} fit textColor="primary" lineHeight={1}>
             Exceptions in JavaScript
           </Heading>
@@ -78,17 +81,54 @@ export default class Presentation extends React.Component {
             <ListItem>Unhandled exceptions</ListItem>
           </List>
         </Slide>
-        <Slide>
+        <Slide transition={["slide"]} >
           <Heading size={4} textColor="secondary" lineHeight="2">
             Handled exception
           </Heading>
-          <CodePane lang="js" source={require("raw-loader!../assets/handle-exception.example")} margin="20px auto" />
+          <CodePane lang="js" source={require("raw-loader!../assets/handled-exception.example")} margin="20px auto" />
         </Slide>
-        <Slide>
+        <Slide transition={["slide"]} >
           <Heading size={4} textColor="secondary" lineHeight="2">
             Unhandled exception
           </Heading>
-          <CodePane lang="js" source={require("raw-loader!../assets/unhandle-exception.example")} margin="20px auto" />
+          <CodePane lang="js" source={require("raw-loader!../assets/unhandled-exception.example")} margin="20px auto" />
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={4} fit textColor="secondary" lineHeight="2">
+            Reporting handled exception
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/reporting-handled-exception.example")} margin="20px auto" />
+        </Slide>
+        <Slide transition={["slide"]} bgColor="secondary">
+          <Heading size={3} fit textColor="primary" lineHeight={1}>
+            Reporting unhandled exception
+          </Heading>
+          <Appear>
+            <span>
+              <span style={{ fontSize: "128px" }}>
+                {"\u{1F914}"}
+              </span>
+            </span>
+          </Appear>
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={4} textColor="secondary" lineHeight="2">
+            Try/Catch
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/reporting-unhandled-exception-try-catch.example")} margin="20px auto" />
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading size={3} fit textColor="primary" lineHeight={2}>
+            GlobalEventHandlers.onerror
+          </Heading>
+          <Text textColor="tertiary" style={{ margin: "0 0 3em 0" }} >An event handler for the error event.</Text>
+          <Link textColor="tertiary" href="https://developer.mozilla.org/en/docs/Web/API/GlobalEventHandlers/onerror"><S type="underline">See: Mozilla Developer Network</S></Link>
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={4} textColor="secondary" lineHeight="2">
+            Try/Catch
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/reporting-unhandled-exception-onerror.example")} margin="20px auto" />
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>

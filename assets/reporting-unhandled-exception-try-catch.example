@@ -1,0 +1,5 @@
+try {
+  runMyApp();
+} catch (e) {
+  reportError(e);
+}

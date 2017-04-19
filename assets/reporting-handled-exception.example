@@ -1,0 +1,5 @@
+try {
+  unstableApiCall('https://our-unreliable-service.com')
+} catch (e) {
+  reportError(e);
+}
