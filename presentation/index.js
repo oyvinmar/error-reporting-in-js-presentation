@@ -20,7 +20,7 @@ import {
 import CodeSlide from "spectacle-code-slide";
 
 // Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
+// import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
@@ -31,14 +31,11 @@ require("spectacle/lib/themes/default/index.css");
 require("../assets/override.css");
 
 
-const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
-};
+// const images = {
+//   kat: require("../assets/kat.png")
+// };
 
-preloader(images);
+// preloader(images);
 
 const theme = createTheme({
   primary: "#009682",
@@ -56,7 +53,11 @@ theme.screen.components.codePane.pre.fontSize = "1.5rem";
 // theme.screen.components.listItem.fontSize = "3.5rem";
 // theme.screen.components.listItem.fontWeight = "500";
 
-// const AppearLis  tItem = ({ children }) => <Appear><ListItem>{children}</ListItem></Appear>;
+const AppearListItem = ({ children }) => <Appear><ListItem>{children}</ListItem></Appear>;
+
+AppearListItem.propTypes = {
+  children: React.PropTypes.isRequired
+};
 
 export default class Presentation extends React.Component {
   render() {
@@ -172,6 +173,56 @@ export default class Presentation extends React.Component {
             Firefox 52
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/firefox-stack.example")} margin="20px auto" />
+        </Slide>
+        <Slide transition={["slide"]} bgColor="secondary">
+          <img src="https://media.giphy.com/media/10o3Um2U3wa4DK/giphy.gif" alt=""/>
+          {/* https://giphy.com/gifs/television-frustrated-seinfeld-10o3Um2U3wa4DK/ */}
+        </Slide>
+        <Slide transition={["slide"]} bgColor="secondary" >
+          <Heading size={3} textColor="primary" lineHeight="2">
+            Libs to the rescue
+          </Heading>
+          <List textColor="tertiary" >
+            <AppearListItem>
+              <Link textColor="tertiary" href="https://github.com/csnover/TraceKit" >
+                <S type="underline">TraceKit</S>
+              </Link>
+            </AppearListItem>
+            <AppearListItem>
+              <Link textColor="tertiary" href="https://github.com/stacktracejs/stacktrace.js/" >
+                <S type="underline">Stacktrace.js</S>
+              </Link>
+            </AppearListItem>
+          </List>
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={3} textColor="secondary" lineHeight="2">
+            Stack as an array
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/stack-as-array.example")} margin="20px auto" />
+        </Slide>
+        <Slide transition={["slide"]} bgColor="secondary">
+          <Heading size={3} textColor="primary" lineHeight="2">
+            Backend
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem>Add endpoint to your backend logging infrastructure</ListItem>
+            <ListItem>Or use a logging service. (Loggly, Papertrail etc.)</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="secondary">
+          <Heading size={3} textColor="primary" lineHeight="2">
+            Data logged
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem>Level (warning, error, etc)</ListItem>
+            <ListItem>Message</ListItem>
+            <ListItem>Session id</ListItem>
+            <ListItem>Stack info</ListItem>
+            <ListItem>User agent</ListItem>
+            <ListItem>App state (Redux store)</ListItem>
+            <ListItem>App name</ListItem>
+          </List>
         </Slide>
         <CodeSlide
           lang="js"
