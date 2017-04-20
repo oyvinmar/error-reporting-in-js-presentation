@@ -224,6 +224,53 @@ export default class Presentation extends React.Component {
             <ListItem>App name</ListItem>
           </List>
         </Slide>
+        <Slide transition={["slide"]} bgColor="secondary">
+          <Heading size={3} textColor="primary" lineHeight="2">
+            Error Reporter
+          </Heading>
+          <CodePane lang="bash" source="yarn add ndla-error-reporter" margin="20px auto" />
+          <Link textColor="tertiary" href="https://github.com/NDLANO/frontend-packages/tree/master/packages/ndla-error-reporter" >
+            <S type="underline">On github</S>
+          </Link>
+        </Slide>
+        <Slide transition={["slide"]} >
+          <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-singleton.example")} margin="20px auto" />
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={3} textColor="secondary" lineHeight="2">
+            Error reporter usage (1)
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-usage-1.example")} margin="20px auto" />
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={3} textColor="secondary" lineHeight="2">
+            Error reporter usage (2)
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-usage-2.example")} margin="20px auto" />
+        </Slide>
+        <Slide transition={["slide"]} bgColor="secondary">
+          <Heading size={3} textColor="primary" lineHeight="2">
+            ErrorReporter API
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem>ErrorReporter.captureMessage(msg)</ListItem>
+            <ListItem>ErrorReporter.captureError(error, [additionalInfo])</ListItem>
+            <ListItem>ErrorReporter.refresh()</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={3} fit textColor="secondary" lineHeight="2">
+            ErrorReporter.captureError
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-capture-error.example")} margin="20px auto" />
+          <Text textColor="tertiary" textAlign="left">Processes error and sends error info to Loggly with optional additional info.</Text>
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={3} fit textColor="secondary" lineHeight="2">
+            ErrorReporter onerror handler
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-onerror.example")} margin="20px auto" />
+        </Slide>
         <CodeSlide
           lang="js"
           transition={["fade"]}

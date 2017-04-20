@@ -1,0 +1,5 @@
+try {
+  // some "dangerous" code
+} catch (e) {
+  errorReporter.captureError(e, {url: 'http://example.com'});
+}

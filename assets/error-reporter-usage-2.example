@@ -1,0 +1,4 @@
+// After initial instantiation
+import ErrorReporter from 'ndla-error-reporter';
+
+ErrorReporter.getInstance().captureMessage('Testing');

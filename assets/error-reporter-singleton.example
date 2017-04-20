@@ -1,0 +1,15 @@
+const ErrorReporter = (function Singleton() {
+  let instance;
+  // Implementation here
+  return {
+    getInstance(config) {
+      if (!instance) {
+        instance = init(config);
+      }
+
+      return instance;
+    },
+  };
+}());
+
+export default ErrorReporter;

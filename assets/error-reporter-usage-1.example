@@ -1,0 +1,10 @@
+import ErrorReporter from 'ndla-error-reporter';
+
+const reduxStore = configureStore();
+
+window.errorReporter = ErrorReporter.getInstance({
+  logglyApiKey: 'xxx',
+  store: reduxStore,
+  environment: 'test',
+  componentName: 'learningpath-frontend'
+});

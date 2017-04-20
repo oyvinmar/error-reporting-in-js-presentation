@@ -1,0 +1,7 @@
+function init(config) {
+  // Suscribes to window.onerror
+  TraceKit.report.subscribe((stackInfo) => {
+    processStackInfo(stackInfo, config);
+  });
+  ...
+}
