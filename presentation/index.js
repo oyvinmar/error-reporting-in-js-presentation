@@ -6,6 +6,7 @@ import {
   Appear,
   BlockQuote,
   Cite,
+  // Image,
   Link,
   CodePane,
   Deck,
@@ -20,7 +21,7 @@ import {
 import CodeSlide from "spectacle-code-slide";
 
 // Import image preloader util
-// import preloader from "spectacle/lib/utils/preloader";
+import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
@@ -31,11 +32,11 @@ require("spectacle/lib/themes/default/index.css");
 require("../assets/override.css");
 
 
-// const images = {
-//   kat: require("../assets/kat.png")
-// };
+const images = {
+  // sortBug: require("../assets/sort-bug.gif")
+};
 
-// preloader(images);
+preloader(images);
 
 const theme = createTheme({
   primary: "#009682",
@@ -270,6 +271,23 @@ export default class Presentation extends React.Component {
             ErrorReporter onerror handler
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-onerror.example")} margin="20px auto" />
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={3} fit textColor="secondary" lineHeight="2">
+            What can go wrong?
+          </Heading>
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={3} textColor="secondary" lineHeight="2">
+            Check for dupes
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-check-dupes.example")} margin="20px auto" />
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={3} textColor="secondary" lineHeight="2">
+            One more spam guard
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-remaining.example")} margin="20px auto" />
         </Slide>
         <CodeSlide
           lang="js"

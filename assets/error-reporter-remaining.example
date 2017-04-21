@@ -1,0 +1,13 @@
+const ErrorReporter = (function Singleton() {
+  ...
+  let messagesRemaining = 10;
+  
+  function sendToLoggly(data, config) {
+    if (!config.logglyApiKey || messagesRemaining < 1) {
+      return;
+    }
+
+    messagesRemaining -= 1;
+
+    send(config.logglyApiKey, extendedData);
+  }

@@ -1,0 +1,13 @@
+function processStackInfo(stackInfo, config, additionalInfo) {
+  const firstFrame =
+    stackInfo.stack && stackInfo.stack[0] ? stackInfo.stack[0] : {};
+  const deduplicate =
+    [stackInfo.name, stackInfo.message, firstFrame.url,
+    firstFrame.line, firstFrame.func].join('|');
+
+  if (deduplicate !== previousNotification) {
+    previousNotification = deduplicate;
+    const data = getLogData(stackInfo, config.store, additionalInfo);
+    sendToLoggly(data, config);
+  }
+}
