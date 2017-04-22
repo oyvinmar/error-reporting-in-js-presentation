@@ -35,8 +35,13 @@ require("../assets/override.css");
 const images = {
   // sortBug: require("../assets/sort-bug.gif")
 };
+const video = {
+  facepalm: require("file-loader!../assets/facepalm.mp4"),
+  sortBug: require("file-loader!../assets/sort-bug.m4v")
+};
 
 preloader(images);
+preloader(video);
 
 const theme = createTheme({
   primary: "#009682",
@@ -176,8 +181,7 @@ export default class Presentation extends React.Component {
           <CodePane lang="js" source={require("raw-loader!../assets/firefox-stack.example")} margin="20px auto" />
         </Slide>
         <Slide transition={["slide"]} bgColor="secondary">
-          <img src="https://media.giphy.com/media/10o3Um2U3wa4DK/giphy.gif" alt=""/>
-          {/* https://giphy.com/gifs/television-frustrated-seinfeld-10o3Um2U3wa4DK/ */}
+          <video src={video.facepalm} autoPlay />
         </Slide>
         <Slide transition={["slide"]} bgColor="secondary" >
           <Heading size={3} textColor="primary" lineHeight="2">
@@ -288,6 +292,14 @@ export default class Presentation extends React.Component {
             One more spam guard
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-remaining.example")} margin="20px auto" />
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading size={3} textColor="secondary" lineHeight="2">
+            What can go wrong?
+          </Heading>
+          <Appear>
+            <video src={video.sortBug} autoPlay />
+          </Appear>
         </Slide>
         <CodeSlide
           lang="js"
