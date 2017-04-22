@@ -4,21 +4,19 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   Appear,
-  BlockQuote,
-  Cite,
-  // Image,
+  Image,
   Link,
   CodePane,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   S,
   Slide,
   Text
 } from "spectacle";
-import CodeSlide from "spectacle-code-slide";
+
+// import CodeSlide from "spectacle-code-slide";
 
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
@@ -33,7 +31,7 @@ require("../assets/override.css");
 
 
 const images = {
-  // sortBug: require("../assets/sort-bug.gif")
+  mozillaSourceMap: require("../assets/mozilla-source-map.png")
 };
 const video = {
   facepalm: require("file-loader!../assets/facepalm.mp4"),
@@ -62,7 +60,7 @@ theme.screen.components.codePane.pre.fontSize = "1.5rem";
 const AppearListItem = ({ children }) => <Appear><ListItem>{children}</ListItem></Appear>;
 
 AppearListItem.propTypes = {
-  children: React.PropTypes.isRequired
+  children: React.PropTypes.node.isRequired
 };
 
 export default class Presentation extends React.Component {
@@ -75,9 +73,12 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide transition={["slide"]} bgColor="primary">
-          <span style={{ fontSize: "128px" }}>
+          <Heading size={3} fit textColor="secondary" lineHeight={1}>
+            Question
+          </Heading>
+          {/* <span style={{ fontSize: "128px" }}>
             {"\u{1F914}"}
-          </span>
+          </span> */}
         </Slide>
         <Slide transition={["slide"]} bgColor="secondary">
           <Heading size={3} fit textColor="primary" lineHeight={1}>
@@ -282,6 +283,9 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide transition={["slide"]} >
+          <video src={video.sortBug} autoPlay />
+        </Slide>
+        <Slide transition={["slide"]} >
           <Heading size={3} textColor="secondary" lineHeight="2">
             Check for dupes
           </Heading>
@@ -293,32 +297,66 @@ export default class Presentation extends React.Component {
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-remaining.example")} margin="20px auto" />
         </Slide>
+        <Slide transition={["slide"]} bgColor="secondary">
+          <Heading size={3} textColor="primary" lineHeight="2">
+            Alternative services
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem>
+              <Link textColor="tertiary" href="https://sentry.io/welcome/" >
+                <S type="underline">Sentry (Raven.js)</S>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor="tertiary" href="https://www.bugsnag.com/" >
+                <S type="underline">Bugsnag</S>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor="tertiary" href="https://trackjs.com/" >
+                <S type="underline">Track:js</S>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor="tertiary" href="https://raygun.com/" >
+                <S type="underline">Raygun</S>
+              </Link>
+            </ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading textColor="secondary" lineHeight="2">
+            One more thing
+          </Heading>
+        </Slide>
         <Slide transition={["slide"]} >
           <Heading size={3} textColor="secondary" lineHeight="2">
-            What can go wrong?
+            Uglified
           </Heading>
-          <Appear>
-            <video src={video.sortBug} autoPlay />
-          </Appear>
+          <CodePane lang="js" source={require("raw-loader!../assets/uglified-stack.example")} margin="20px auto" />
         </Slide>
-        <CodeSlide
-          lang="js"
-          transition={["fade"]}
-          transition={[]}
-          code={require("raw-loader!../assets/code.example")}
-          ranges={[
-            { loc: [0, 200], title: "Hello world example" },
-            { loc: [0, 1], note: "Import hello world dependencies" },
-            { loc: [2, 6], note: "Create sayHelloWorld function" },
-            { loc: [3, 4], note: "Call and log hello" }
-          ]}
-        />
-
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+        <Slide transition={["slide"]} >
+          <Heading size={3} fit textColor="secondary" lineHeight="2">
+            Generate separate source-map on (prod) build
+          </Heading>
+          <CodePane lang="js" source={require("raw-loader!../assets/uglify-webpack.example")} margin="20px auto" />
+        </Slide>
+        <Slide transition={["slide"]} notes="Parse and consume source maps" >
+          <Heading size={4} textColor="secondary" lineHeight="2">
+            Mozilla source-map
+          </Heading>
+          <Image width="100%" src={images.mozillaSourceMap} />
+        </Slide>
+        <Slide transition={["slide"]} >
+          <Heading fit caps textColor="secondary" lineHeight="2">
+            Demo
+          </Heading>
+        </Slide>
+        <Slide transition={["spin", "slide"]}>
+          <Heading size={1} fit lineHeight={1.5} textColor="secondary">
+            Thanks for listening!
+          </Heading>
+          <Text textColor="tertiary">Questions?</Text>
         </Slide>
       </Deck>
     );

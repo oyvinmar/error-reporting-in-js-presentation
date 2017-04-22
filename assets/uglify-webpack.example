@@ -1,0 +1,5 @@
+new webpack.optimize.UglifyJsPlugin({
+  sourceMap: true
+}),
+...
+devtool: 'source-map',

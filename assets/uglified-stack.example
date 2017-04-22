@@ -1,0 +1,7 @@
+"stack": [
+  { "url": "main.js", "func": "r", "line": 25, "column": 183317 },
+  { "url": "main.js", "func": "r", "line": 11, "column": 118147 },
+  { "url": "main.js", "func": "a", "line": 11, "column": 114266 },
+  { "url": "main.js", "func": "u", "line": 11, "column": 114483 },
+  { "url": "main.js", "func": "d", "line": 11, "column": 51291 }
+]
