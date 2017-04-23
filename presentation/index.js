@@ -11,7 +11,6 @@ import {
   Heading,
   ListItem,
   List,
-  S,
   Slide,
   Text
 } from "spectacle";
@@ -47,14 +46,16 @@ const theme = createTheme({
   tertiary: "#FDFDFD",
   quartenary: "white"
 }, {
-  primary: "Montserrat",
-  secondary: "Helvetica"
+  primary: "BlinkMacSystemFont, Helvetica",
+  secondary: "BlinkMacSystemFont, Helvetica"
+  // primary: { name: "Source Sans Pro", googleFont: true, styles: [ "400", "600", "700i" ] },
+  // secondary: { name: "Signika", googleFont: true, styles: [ "400", "600", "700i" ] }
 });
 
 // theme.screen.components.codePane.pre.fontSize = "1.5rem";
 theme.screen.components.codePane.pre.fontSize = "1.5rem";
 // theme.screen.components.image.margin = "1.5rem auto";
-// theme.screen.components.listItem.fontSize = "3.5rem";
+// theme.screen.components.listItem.fontSize = "2.2rem";
 // theme.screen.components.listItem.fontWeight = "500";
 
 const AppearListItem = ({ children }) => <Appear><ListItem>{children}</ListItem></Appear>;
@@ -68,7 +69,7 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={[]} transitionDuration={500} theme={theme}>
         <Slide transition={["slide"]} bgColor="primary">
-          <Heading size={1} fit lineHeight={1} textColor="secondary">
+          <Heading size={1} lineHeight={1.5} textColor="secondary">
             Error reporting in JavaScript
           </Heading>
         </Slide>
@@ -130,7 +131,7 @@ export default class Presentation extends React.Component {
             GlobalEventHandlers window.onerror
           </Heading>
           <Text textColor="tertiary" style={{ margin: "0 0 3em 0" }} >An event handler for the error event.</Text>
-          <Link textColor="tertiary" href="https://developer.mozilla.org/en/docs/Web/API/GlobalEventHandlers/onerror"><S type="underline">See: Mozilla Developer Network</S></Link>
+          <Link textColor="tertiary" href="https://developer.mozilla.org/en/docs/Web/API/GlobalEventHandlers/onerror">Source: Mozilla Developer Network</Link>
         </Slide>
         <Slide transition={["slide"]} >
           <Heading size={3} textColor="secondary" lineHeight="2">
@@ -143,11 +144,11 @@ export default class Presentation extends React.Component {
             window.onerror arguments
           </Heading>
           <List textColor="tertiary">
-            <ListItem><b>message</b> – The message associated with the error</ListItem>
-            <ListItem><b>url</b> – The URL of the script associated with the error</ListItem>
-            <ListItem><b>lineNo</b> – The line number (if available)</ListItem>
-            <ListItem><b>columnNo</b> – The column number (if available)</ListItem>
-            <ListItem><b>error</b> – The Error object associated with this error (if available)</ListItem>
+            <ListItem textSize="2.2rem"><b>message</b> – The message associated with the error</ListItem>
+            <ListItem textSize="2.2rem"><b>url</b> – The URL of the script associated with the error</ListItem>
+            <ListItem textSize="2.2rem"><b>lineNo</b> – The line number (if available)</ListItem>
+            <ListItem textSize="2.2rem"><b>columnNo</b> – The column number (if available)</ListItem>
+            <ListItem textSize="2.2rem"><b>error</b> – The Error object associated with this error (if available)</ListItem>
           </List>
         </Slide>
         <Slide transition={["slide"]} bgColor="secondary" >
@@ -160,13 +161,13 @@ export default class Presentation extends React.Component {
             <ListItem><b>lineNumber</b> – Same as onerror</ListItem>
           </List>
           <Link textColor="tertiary" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/" >
-            <S type="underline">Source: Mozilla Developer Network</S>
+            Source: Mozilla Developer Network
           </Link>
         </Slide>
         <Slide transition={["slide"]} bgColor="secondary" >
           <Text textColor="tertiary" style={{ margin: "0 0 3em 0" }}>May also contain a non-standard property: <b>Error.prototype.stack</b></Text>
           <Link textColor="tertiary" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">
-            <S type="underline"> Source: Mozilla Developer Network</S>
+             Source: Mozilla Developer Network
           </Link>
         </Slide>
         <Slide transition={["slide"]} >
@@ -191,12 +192,12 @@ export default class Presentation extends React.Component {
           <List textColor="tertiary" >
             <AppearListItem>
               <Link textColor="tertiary" href="https://github.com/csnover/TraceKit" >
-                <S type="underline">TraceKit</S>
+                TraceKit
               </Link>
             </AppearListItem>
             <AppearListItem>
               <Link textColor="tertiary" href="https://github.com/stacktracejs/stacktrace.js/" >
-                <S type="underline">Stacktrace.js</S>
+                Stacktrace.js
               </Link>
             </AppearListItem>
           </List>
@@ -236,7 +237,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <CodePane lang="bash" source="yarn add ndla-error-reporter" margin="20px auto" />
           <Link textColor="tertiary" href="https://github.com/NDLANO/frontend-packages/tree/master/packages/ndla-error-reporter" >
-            <S type="underline">On github</S>
+            See source code on Github
           </Link>
         </Slide>
         <Slide transition={["slide"]} >
@@ -304,22 +305,22 @@ export default class Presentation extends React.Component {
           <List textColor="tertiary">
             <ListItem>
               <Link textColor="tertiary" href="https://sentry.io/welcome/" >
-                <S type="underline">Sentry (Raven.js)</S>
+                Sentry (Raven.js)
               </Link>
             </ListItem>
             <ListItem>
               <Link textColor="tertiary" href="https://www.bugsnag.com/" >
-                <S type="underline">Bugsnag</S>
+                Bugsnag
               </Link>
             </ListItem>
             <ListItem>
               <Link textColor="tertiary" href="https://trackjs.com/" >
-                <S type="underline">Track:js</S>
+                Track:js
               </Link>
             </ListItem>
             <ListItem>
               <Link textColor="tertiary" href="https://raygun.com/" >
-                <S type="underline">Raygun</S>
+                Raygun
               </Link>
             </ListItem>
           </List>
