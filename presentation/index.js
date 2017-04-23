@@ -67,21 +67,21 @@ AppearListItem.propTypes = {
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={[]} transitionDuration={500} theme={theme}>
-        <Slide transition={["slide"]} bgColor="primary">
+      <Deck transition={["slide"]} transitionDuration={500} theme={theme}>
+        <Slide bgColor="primary">
           <Heading size={1} lineHeight={1.5} textColor="secondary">
             Error reporting in JavaScript
           </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Heading size={3} fit textColor="secondary" lineHeight={1}>
-            Question
+            Question?
           </Heading>
           {/* <span style={{ fontSize: "128px" }}>
             {"\u{1F914}"}
           </span> */}
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary">
+        <Slide bgColor="secondary">
           <Heading size={3} fit textColor="primary" lineHeight={1}>
             Exceptions in JavaScript
           </Heading>
@@ -90,25 +90,25 @@ export default class Presentation extends React.Component {
             <ListItem>Unhandled exceptions</ListItem>
           </List>
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} textColor="secondary" lineHeight="2">
             Handled exception
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/handled-exception.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} textColor="secondary" lineHeight="2">
             Unhandled exception
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/unhandled-exception.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} fit textColor="secondary" lineHeight="2">
             Reporting handled exception
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/reporting-handled-exception.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary">
+        <Slide bgColor="secondary">
           <Heading size={3} fit textColor="primary" lineHeight={1}>
             Reporting unhandled exception
           </Heading>
@@ -120,7 +120,7 @@ export default class Presentation extends React.Component {
             </span>
           </Appear>
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} textColor="secondary" lineHeight="2">
             Try/Catch
           </Heading>
@@ -133,13 +133,13 @@ export default class Presentation extends React.Component {
           <Text textColor="tertiary" style={{ margin: "0 0 3em 0" }} >An event handler for the error event.</Text>
           <Link textColor="tertiary" href="https://developer.mozilla.org/en/docs/Web/API/GlobalEventHandlers/onerror">Source: Mozilla Developer Network</Link>
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} textColor="secondary" lineHeight="2">
             window.onerror syntax
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/reporting-unhandled-exception-onerror.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary" >
+        <Slide bgColor="secondary" >
           <Heading size={4} fit textColor="primary" lineHeight="2">
             window.onerror arguments
           </Heading>
@@ -151,7 +151,7 @@ export default class Presentation extends React.Component {
             <ListItem textSize="2.2rem"><b>error</b> – The Error object associated with this error (if available)</ListItem>
           </List>
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary" >
+        <Slide bgColor="secondary" >
           <Heading size={3} textColor="primary" lineHeight="2">
             The Error Object
           </Heading>
@@ -164,28 +164,28 @@ export default class Presentation extends React.Component {
             Source: Mozilla Developer Network
           </Link>
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary" >
+        <Slide bgColor="secondary" >
           <Text textColor="tertiary" style={{ margin: "0 0 3em 0" }}>May also contain a non-standard property: <b>Error.prototype.stack</b></Text>
           <Link textColor="tertiary" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">
-             Source: Mozilla Developer Network
+            Source: Mozilla Developer Network
           </Link>
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} textColor="secondary" lineHeight="2">
             Chrome 57
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/chrome-stack.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} textColor="secondary" lineHeight="2">
             Firefox 52
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/firefox-stack.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary">
+        <Slide bgColor="secondary">
           <video src={video.facepalm} autoPlay />
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary" >
+        <Slide bgColor="secondary" >
           <Heading size={3} textColor="primary" lineHeight="2">
             Libs to the rescue
           </Heading>
@@ -202,13 +202,13 @@ export default class Presentation extends React.Component {
             </AppearListItem>
           </List>
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} textColor="secondary" lineHeight="2">
             Stack as an array
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/stack-as-array.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary">
+        <Slide bgColor="secondary">
           <Heading size={3} textColor="primary" lineHeight="2">
             Backend
           </Heading>
@@ -217,7 +217,7 @@ export default class Presentation extends React.Component {
             <ListItem>Or use a logging service. (Loggly, Papertrail etc.)</ListItem>
           </List>
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary">
+        <Slide bgColor="secondary">
           <Heading size={3} textColor="primary" lineHeight="2">
             Data logged
           </Heading>
@@ -231,7 +231,7 @@ export default class Presentation extends React.Component {
             <ListItem>App name</ListItem>
           </List>
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary">
+        <Slide bgColor="secondary">
           <Heading size={3} textColor="primary" lineHeight="2">
             Error Reporter
           </Heading>
@@ -240,10 +240,10 @@ export default class Presentation extends React.Component {
             See source code on Github
           </Link>
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-singleton.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} textColor="secondary" lineHeight="2">
             Error reporter usage (1)
           </Heading>
@@ -255,7 +255,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-usage-2.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary">
+        <Slide bgColor="secondary">
           <Heading size={3} textColor="primary" lineHeight="2">
             ErrorReporter API
           </Heading>
@@ -265,40 +265,40 @@ export default class Presentation extends React.Component {
             <ListItem>ErrorReporter.refresh()</ListItem>
           </List>
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} fit textColor="secondary" lineHeight="2">
             ErrorReporter.captureError
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-capture-error.example")} margin="20px auto" />
           <Text textColor="tertiary" textAlign="left">Processes error and sends error info to Loggly with optional additional info.</Text>
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} fit textColor="secondary" lineHeight="2">
             ErrorReporter onerror handler
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-onerror.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} fit textColor="secondary" lineHeight="2">
             What can go wrong?
           </Heading>
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <video src={video.sortBug} autoPlay />
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} textColor="secondary" lineHeight="2">
             Check for dupes
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-check-dupes.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} textColor="secondary" lineHeight="2">
             One more spam guard
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-remaining.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary">
+        <Slide bgColor="secondary">
           <Heading size={3} textColor="primary" lineHeight="2">
             Alternative services
           </Heading>
@@ -325,30 +325,30 @@ export default class Presentation extends React.Component {
             </ListItem>
           </List>
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading textColor="secondary" lineHeight="2">
             One more thing
           </Heading>
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} textColor="secondary" lineHeight="2">
             Uglified
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/uglified-stack.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading size={3} fit textColor="secondary" lineHeight="2">
             Generate separate source-map on (prod) build
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/uglify-webpack.example")} margin="20px auto" />
         </Slide>
-        <Slide transition={["slide"]} notes="Parse and consume source maps" >
+        <Slide notes="Parse and consume source maps" >
           <Heading size={4} textColor="secondary" lineHeight="2">
             Mozilla source-map
           </Heading>
           <Image width="100%" src={images.mozillaSourceMap} />
         </Slide>
-        <Slide transition={["slide"]} >
+        <Slide >
           <Heading fit caps textColor="secondary" lineHeight="2">
             Demo
           </Heading>
