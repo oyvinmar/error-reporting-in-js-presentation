@@ -1,4 +1,4 @@
 window.onerror =
   function(messageOrEvent, source, lineno, colno, error) {
-
+  // Code here
 }

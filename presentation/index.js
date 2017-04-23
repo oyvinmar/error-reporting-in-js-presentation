@@ -22,6 +22,7 @@ import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+import notes from "./notes";
 
 // Require CSS
 require("normalize.css");
@@ -68,12 +69,12 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["slide"]} transitionDuration={500} theme={theme}>
-        <Slide bgColor="primary">
+        <Slide bgColor="primary" notes="">
           <Heading size={1} lineHeight={1.5} textColor="secondary">
             Error reporting in JavaScript
           </Heading>
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgColor="primary" notes={notes.question}>
           <Heading size={3} fit textColor="secondary" lineHeight={1}>
             Question?
           </Heading>
@@ -128,7 +129,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={3} fit textColor="primary" lineHeight={2}>
-            GlobalEventHandlers window.onerror
+            GlobalEventHandler window.onerror
           </Heading>
           <Text textColor="tertiary" style={{ margin: "0 0 3em 0" }} >An event handler for the error event.</Text>
           <Link textColor="tertiary" href="https://developer.mozilla.org/en/docs/Web/API/GlobalEventHandlers/onerror">Source: Mozilla Developer Network</Link>
@@ -158,14 +159,14 @@ export default class Presentation extends React.Component {
           <List textColor="tertiary" style={{ margin: "0 0 3em 0" }} >
             <ListItem><b>message</b> – Same as onerror message</ListItem>
             <ListItem><b>fileName</b> – Same as onerror url</ListItem>
-            <ListItem><b>lineNumber</b> – Same as onerror</ListItem>
+            <ListItem><b>lineNumber</b> – Same as onerror lineNo</ListItem>
           </List>
           <Link textColor="tertiary" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/" >
             Source: Mozilla Developer Network
           </Link>
         </Slide>
         <Slide bgColor="secondary" >
-          <Text textColor="tertiary" style={{ margin: "0 0 3em 0" }}>May also contain a non-standard property: <b>Error.prototype.stack</b></Text>
+          <Text textColor="tertiary" lineHeight="1.5em" style={{ margin: "0 0 3em 0" }}>May also contain a non-standard property: <b>Error.prototype.stack</b></Text>
           <Link textColor="tertiary" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">
             Source: Mozilla Developer Network
           </Link>
