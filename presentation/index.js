@@ -47,8 +47,8 @@ const theme = createTheme({
   tertiary: "#FDFDFD",
   quartenary: "white"
 }, {
-  primary: "BlinkMacSystemFont, Helvetica",
-  secondary: "BlinkMacSystemFont, Helvetica"
+  primary: "-apple-system, BlinkMacSystemFont, Helvetica",
+  secondary: "-apple-system, BlinkMacSystemFont, Helvetica"
   // primary: { name: "Source Sans Pro", googleFont: true, styles: [ "400", "600", "700i" ] },
   // secondary: { name: "Signika", googleFont: true, styles: [ "400", "600", "700i" ] }
 });
