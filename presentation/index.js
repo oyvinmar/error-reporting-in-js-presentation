@@ -354,11 +354,28 @@ export default class Presentation extends React.Component {
             Demo
           </Heading>
         </Slide>
-        <Slide transition={["spin", "slide"]}>
+        <Slide transition={["spin", "slide"]} >
           <Heading size={1} fit lineHeight={1.5} textColor="secondary">
             Thanks for listening!
           </Heading>
-          <Text textColor="tertiary">Questions?</Text>
+          <Text textAlign="left" textColor="secondary" margin="1.5em 0 0 0">Links to source code:</Text>
+          <List textColor="tertiary" style={{ listStyleType: "none" }}>
+            <ListItem>
+              <Link textColor="tertiary" href="https://github.com/NDLANO/frontend-packages/tree/master/packages/ndla-error-reporter" >
+                Error report source
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor="tertiary" href="https://github.com/NDLANO/frontend-packages/tree/master/packages/ndla-source-map-resolver" >
+                Source map resolver
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor="tertiary" href="https://github.com/NDLANO/learningpath-frontend" >
+                Learningpath frontend
+              </Link>
+            </ListItem>
+          </List>
         </Slide>
       </Deck>
     );
