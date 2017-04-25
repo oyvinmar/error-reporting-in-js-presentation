@@ -5,8 +5,8 @@ function processStackInfo(stackInfo, config, additionalInfo) {
     [stackInfo.name, stackInfo.message, firstFrame.url,
     firstFrame.line, firstFrame.func].join('|');
 
-  if (deduplicate !== previousNotification) {
-    previousNotification = deduplicate;
+  if (deduplicate !== previousStackInfo) {
+    previousStackInfo = deduplicate;
     const data = getLogData(stackInfo, config.store, additionalInfo);
     sendToLoggly(data, config);
   }

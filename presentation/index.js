@@ -328,7 +328,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide >
           <Heading textColor="secondary" lineHeight="2">
-            One more thing
+            One more thing...
           </Heading>
         </Slide>
         <Slide >
