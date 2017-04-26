@@ -78,9 +78,6 @@ export default class Presentation extends React.Component {
           <Heading size={3} fit textColor="secondary" lineHeight={1}>
             Question?
           </Heading>
-          {/* <span style={{ fontSize: "128px" }}>
-            {"\u{1F914}"}
-          </span> */}
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={3} fit textColor="primary" lineHeight={1}>
