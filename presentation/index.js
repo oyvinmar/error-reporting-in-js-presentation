@@ -203,19 +203,24 @@ export default class Presentation extends React.Component {
             </AppearListItem>
           </List>
         </Slide>
-        <Slide >
+        <Slide>
           <Heading size={3} textColor="secondary" lineHeight="2">
             Stack as an array
           </Heading>
           <CodePane lang="js" source={require("raw-loader!../assets/stack-as-array.example")} margin="20px auto" />
         </Slide>
         <Slide bgColor="secondary">
+          <Heading size={3} fit textColor="primary" lineHeight="2">
+            Intermission
+          </Heading>
+        </Slide>
+        <Slide bgColor="secondary">
           <Heading size={3} textColor="primary" lineHeight="2">
             Backend
           </Heading>
           <List textColor="tertiary">
-            <ListItem>Add endpoint to your backend logging infrastructure</ListItem>
-            <ListItem>Or use a logging service. (Loggly, Papertrail etc.)</ListItem>
+            <AppearListItem>Add endpoint to your backend logging infrastructure</AppearListItem>
+            <AppearListItem>Or use a logging service. (Loggly, Papertrail etc.)</AppearListItem>
           </List>
         </Slide>
         <Slide bgColor="secondary">
@@ -229,7 +234,6 @@ export default class Presentation extends React.Component {
             <ListItem>Stack info</ListItem>
             <ListItem>User agent</ListItem>
             <ListItem>App state (Redux store)</ListItem>
-            <ListItem>App name</ListItem>
           </List>
         </Slide>
         <Slide bgColor="secondary">
@@ -240,9 +244,6 @@ export default class Presentation extends React.Component {
           <Link textColor="tertiary" href="https://github.com/NDLANO/frontend-packages/tree/master/packages/ndla-error-reporter" >
             See source code on Github
           </Link>
-        </Slide>
-        <Slide >
-          <CodePane lang="js" source={require("raw-loader!../assets/error-reporter-singleton.example")} margin="20px auto" />
         </Slide>
         <Slide >
           <Heading size={3} textColor="secondary" lineHeight="2">
@@ -362,7 +363,7 @@ export default class Presentation extends React.Component {
           <List textColor="tertiary" style={{ listStyleType: "none" }}>
             <ListItem>
               <Link textColor="tertiary" href="https://github.com/NDLANO/frontend-packages/tree/master/packages/ndla-error-reporter" >
-                Error report source
+                Error reporter source
               </Link>
             </ListItem>
             <ListItem>

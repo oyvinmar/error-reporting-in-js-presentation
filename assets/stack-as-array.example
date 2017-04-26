@@ -4,9 +4,9 @@
     "func":"createError",
     "args":[],
     "line":3429,
-    "column":null
+    "column":345
   },
-  {"url":"http://localhost:3000/assets/main.js","func":"ReactErrorUtils.invokeGuardedCallback","args":[],"line":1969,"column":null},
+  {"url":"http://localhost:3000/assets/main.js","func":"ReactErrorUtils.invokeGuardedCallback","args":[],"line":1969,"column":44},
   {"url":"http://localhost:3000/assets/main.js","func":"executeDispatch","args":[],"line":1941,"column":null},
   {"url":"http://localhost:3000/assets/main.js","func":"executeDispatchesInOrder","args":[],"line":1941,"column":null},
   {"url":"http://localhost:3000/assets/main.js","func":"executeDispatchesAndRelease","args":[],"line":1305,"column":null},
