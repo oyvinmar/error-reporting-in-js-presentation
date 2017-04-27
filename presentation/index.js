@@ -68,7 +68,7 @@ AppearListItem.propTypes = {
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["slide"]} transitionDuration={500} theme={theme}>
+      <Deck transition={["slide"]} progress="None" transitionDuration={500} theme={theme}>
         <Slide bgColor="primary" notes="">
           <Heading size={1} lineHeight={1.5} textColor="secondary">
             Error reporting in JavaScript
