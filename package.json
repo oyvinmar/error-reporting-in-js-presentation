@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "raw-loader": "^0.5.1",
     "react": "^16.2.0",
+    "react-app-rewired": "^1.4.0",
     "react-dom": "^16.2.0",
     "spectacle-scripts": "2.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start --scripts-version spectacle-scripts",
+    "build": "react-app-rewired build --scripts-version spectacle-scripts",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
