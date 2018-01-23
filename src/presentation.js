@@ -78,8 +78,8 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide bgColor="primary" notes={notes.question}>
-          <Heading size={3} fit textColor="secondary" lineHeight={1}>
-            Question?
+          <Heading size={1} textColor="secondary" style={{ fontSize: '15em' }}>
+            ?
           </Heading>
         </Slide>
         <Slide bgColor="secondary">
