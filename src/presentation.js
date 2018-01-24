@@ -228,7 +228,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={3} textColor="secondary" lineHeight="2">
-            Chrome 57
+            Chrome
           </Heading>
           <CodePane
             lang="js"
@@ -238,7 +238,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={3} textColor="secondary" lineHeight="2">
-            Firefox 52
+            Firefox
           </Heading>
           <CodePane
             lang="js"
