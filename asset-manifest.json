@@ -1,9 +1,10 @@
 {
   "main.css": "static/css/main.1c93fcf1.css",
   "main.css.map": "static/css/main.1c93fcf1.css.map",
-  "main.js": "static/js/main.75f6c391.js",
-  "main.js.map": "static/js/main.75f6c391.js.map",
+  "main.js": "static/js/main.87b2bf72.js",
+  "main.js.map": "static/js/main.87b2bf72.js.map",
   "static/media/facepalm.mp4": "static/media/facepalm.28f86913.mp4",
+  "static/media/kds-logo.svg": "static/media/kds-logo.112223aa.svg",
   "static/media/mozilla-source-map.png": "static/media/mozilla-source-map.f12efb98.png",
   "static/media/sort-bug.m4v": "static/media/sort-bug.7c05bc2e.m4v"
 }
