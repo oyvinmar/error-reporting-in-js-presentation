@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
+  Fit,
+  Fill,
   Appear,
   Image,
   Link,
@@ -27,6 +29,7 @@ require('./assets/prism-tomorrow.css');
 
 const images = {
   mozillaSourceMap: require('./assets/mozilla-source-map.png'),
+  kdsLogo: require('./assets/kds-logo.svg'),
 };
 
 const video = {
@@ -51,7 +54,6 @@ const theme = createTheme(
 );
 
 theme.screen.components.codePane.fontSize = '1.4rem';
-// console.log(theme);
 
 const AppearListItem = ({ children }) => (
   <Appear>
@@ -72,10 +74,30 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
-        <Slide bgColor="primary" notes="">
-          <Heading size={1} lineHeight={1.5} textColor="secondary">
-            Error reporting in JavaScript
-          </Heading>
+        <Slide bgColor="secondary" notes="">
+          <Fill>
+            <Heading size={1} lineHeight={1} textColor="primary">
+              Error reporting in JavaScript
+            </Heading>
+          </Fill>
+          <Fit>
+            <Heading size={5} fit lineHeight={3.5} textColor="tertiary">
+              Øyvind Marthinsen - Knowit Objectnet
+            </Heading>
+          </Fit>
+          <div style={{ position: 'absolute' }}>
+            <Image width="100%" src={images.kdsLogo} />
+          </div>
+          <div style={{ position: 'absolute', right: 0 }}>
+            <Link href="mailto:oma@knowit.no" textColor="tertiary">
+              oma@knowit.no
+            </Link>
+            <br />
+            <br />
+            <Link href="https://github.com/oyvinmar/" textColor="tertiary">
+              https://github.com/oyvinmar/
+            </Link>
+          </div>
         </Slide>
         <Slide bgColor="primary" notes={notes.question}>
           <Heading size={1} textColor="secondary" style={{ fontSize: '15em' }}>
